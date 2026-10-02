@@ -7,16 +7,19 @@ from discord import app_commands
 import requests
 
 # --- CONFIGURATION (Sécurisée via les variables d'environnement) ---
-BOT_TOKEN = os.getenv("MTU1Mzc2MjU3NDQzOTQxNTgzOA.GKB6kf.Ojj8KgZyNHIG4Vw7OGGIi11JG0X5zbCNfL-Fe4")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # Tes 5 tokens en rotation récupérés dynamiquement
 USER_TOKENS = [
-    os.getenv("MTU1MzU3OTc1OTQ1ODQ1NTY1NQ.G1ZWU1.MAxriPkxsR29eya06JbJKSBKvkXkbComeYdNK8"),
-    os.getenv("ODA1MDQyOTg2MTg2MTc4NTgw.GKvOeX.kYoS-GgSuM8MFE6Bq7ZCzFvwzUUBW3BtrENwzc"),
-    os.getenv("ODA1MDQyOTg2MTg2MTc4NTgw.GcQzYA.9NQ6BJ7PbAKoq5wWEe2FHrl8s0vjIherwNKX9E"),
-    os.getenv("MTQ1ODUyNjc4MTg1NzQ2ODY3MA.G_0Q4M.3MW6XE9q11hufWLhPhp9Rr7t4LAKPRWcaE67_c"),
-    os.getenv("MTU1MzQyMTY4MTU1MTQ3ODg1Ng.GH6dMO.esOUFU8pq5U9LFUdmzLO9c7dqtVSLSkHH_nQXI")
+    os.getenv("TOKEN_1"),
+    os.getenv("TOKEN_2"),
+    os.getenv("TOKEN_3"),
+    os.getenv("TOKEN_4"),
+    os.getenv("TOKEN_5")
 ]
+
+# --- LE RESTE DE TON CODE COMMENCE ICI ---
+# (Tes IDs de salons, tes classes, tes commandes, etc.)
 
 # Remplace par tes vrais IDs de salons et de serveur
 CHANNEL_CMD_ID = 1553580588772892693          # ID de ton salon #cmd
