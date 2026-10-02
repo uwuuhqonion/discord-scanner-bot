@@ -1,20 +1,21 @@
 import asyncio
+import os
 import random
 import string
 import discord
 from discord import app_commands
 import requests
 
-# --- CONFIGURATION ---
-BOT_TOKEN = "MTU1Mzc2MjU3NDQzOTQxNTgzOA.GKB6kf.Ojj8KgZyNHIG4Vw7OGGIi11JG0X5zbCNfL-Fe4"
+# --- CONFIGURATION (Sécurisée via les variables d'environnement) ---
+BOT_TOKEN = os.getenv("MTU1Mzc2MjU3NDQzOTQxNTgzOA.GKB6kf.Ojj8KgZyNHIG4Vw7OGGIi11JG0X5zbCNfL-Fe4")
 
-# Tes 5 tokens en rotation
+# Tes 5 tokens en rotation récupérés dynamiquement
 USER_TOKENS = [
-    "MTU1MzU3OTc1OTQ1ODQ1NTY1NQ.G1ZWU1.MAxriPkxsR29eya06JbJKSBKvkXkbComeYdNK8",
-    "ODA1MDQyOTg2MTg2MTc4NTgw.GKvOeX.kYoS-GgSuM8MFE6Bq7ZCzFvwzUUBW3BtrENwzc",
-    "ODA1MDQyOTg2MTg2MTc4NTgw.GcQzYA.9NQ6BJ7PbAKoq5wWEe2FHrl8s0vjIherwNKX9E",
-    "MTQ1ODUyNjc4MTg1NzQ2ODY3MA.G_0Q4M.3MW6XE9q11hufWLhPhp9Rr7t4LAKPRWcaE67_c",
-    "MTU1MzQyMTY4MTU1MTQ3ODg1Ng.GH6dMO.esOUFU8pq5U9LFUdmzLO9c7dqtVSLSkHH_nQXI"
+    os.getenv("MTU1MzU3OTc1OTQ1ODQ1NTY1NQ.G1ZWU1.MAxriPkxsR29eya06JbJKSBKvkXkbComeYdNK8"),
+    os.getenv("ODA1MDQyOTg2MTg2MTc4NTgw.GKvOeX.kYoS-GgSuM8MFE6Bq7ZCzFvwzUUBW3BtrENwzc"),
+    os.getenv("ODA1MDQyOTg2MTg2MTc4NTgw.GcQzYA.9NQ6BJ7PbAKoq5wWEe2FHrl8s0vjIherwNKX9E"),
+    os.getenv("MTQ1ODUyNjc4MTg1NzQ2ODY3MA.G_0Q4M.3MW6XE9q11hufWLhPhp9Rr7t4LAKPRWcaE67_c"),
+    os.getenv("MTU1MzQyMTY4MTU1MTQ3ODg1Ng.GH6dMO.esOUFU8pq5U9LFUdmzLO9c7dqtVSLSkHH_nQXI")
 ]
 
 # Remplace par tes vrais IDs de salons et de serveur
